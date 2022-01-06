@@ -1,26 +1,26 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // AdminLTE
-@import '~admin-lte/dist/css/adminlte.css';
+@import "~admin-lte/dist/css/adminlte.css";
 
 // fontAwesome
-$fa-font-path:"../webfonts";
+$fa-font-path: "../webfonts";
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
-.router-link-exact-active{
-    background-color: #366faf !important;
-    color:white !important;
+.router-link-exact-active {
+    background-color: #6f3b62 !important;
+    color: rgb(167, 79, 79) !important;
 }
 
 // #366faf

@@ -35,11 +35,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <router-link to="/dashboard" class="brand-link">
+    <!-- <router-link to="/dashboard" class="brand-link"> -->
+    <a href="/dashboard" class="brand-link">
       <img src="./images/logoD.png" alt="Daliran Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Ally Vote</span>
-    </router-link>
-
+    <!-- </router-link> -->
+    </a>
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
@@ -48,9 +49,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="./images/profile.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">
+          <a href="/profile" class="d-block">
           <!-- <router-link to="/profile" class="d-block"> -->
+            <p>
           {{ Auth::user()->name }}
+          </p>
           <!-- </router-link> -->
           </a>
         </div>
@@ -74,7 +77,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-            <router-link to="/dashboard" class="nav-link">
+            <router-link to="/dashboard" active-class="active" class="nav-link">
               <!-- <i class="nav-icon fas fa-th"></i> -->
               <i class="nav-icon fas fa-tachometer-alt green"></i>
               <p>
@@ -86,32 +89,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+          <router-link to="#" active-class="active" class="nav-link">
               <i class="nav-icon fas fa-cog orange"></i>
               <p>
                 Manage
                 <i class="right fas fa-angle-left"></i>
               </p>
-            </a>
+              </router-link>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <router-link to="/users" class="nav-link">
+                <router-link to="/users" active-class="active" class="nav-link">
                   <i class="fas fa-users nav-icon blue"></i>
                   <p>Users</p>
                 </router-link>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inactive Page</p>
-                </a>
+              <router-link to="/UnderConstruct" active-class="active" class="nav-link">
+                  <i class="fas fa-wrench nav-icon yellow"></i>
+                  <p>UnderConstruct</p>
+                  </router-link>
               </li>
             </ul>
           </li>
           
 
           <li class="nav-item">
-            <router-link to="/profile" class="nav-link">
+            <router-link to="/profile" active-class="active" class="nav-link">
               <!-- <i class="nav-icon fas fa-th"></i> -->
               <i class="nav-icon fas fa-user purple"></i>
               <p>
@@ -120,7 +123,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </router-link>
           </li>
-
+          
           <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -151,6 +154,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div id="app">
           <!-- <router-link class="items" to="/Dashboard">Dashboarddddddd</router-link> -->
       <router-view></router-view>
+      <vue-progress-bar></vue-progress-bar>
       </div>
       </div><!-- /.container-fluid -->
     </div>
